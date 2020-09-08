@@ -36111,7 +36111,7 @@
       (net 20 "Net-(U1-Pad20)"))
   )
 
-  (gr_text "2020 REALGLOBE Inc rev 0.1" (at 72.39 39.37) (layer F.SilkS)
+  (gr_text "2020 REALGLOBE Inc rev 0.2" (at 72.39 39.37) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_arc (start 107.56 38.1) (end 108.83 38.1) (angle -90) (layer Edge.Cuts) (width 0.05) (tstamp 5F3373E3))
