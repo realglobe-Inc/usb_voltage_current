@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:usb_voltage_current-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -240,13 +239,9 @@ Wire Wire Line
 Wire Wire Line
 	5600 2350 5700 2350
 Wire Wire Line
-	4050 1800 5600 1800
-Wire Wire Line
 	3950 2300 4100 2300
 Wire Wire Line
 	4100 2300 4100 1750
-Wire Wire Line
-	4100 1750 4300 1750
 Wire Wire Line
 	5550 1750 5550 2250
 Wire Wire Line
@@ -323,9 +318,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 2450 1650 2450
 Wire Wire Line
-	2300 2600 2050 2600
-Wire Wire Line
-	2300 2750 2150 2750
+	2300 2600 2250 2600
 Wire Wire Line
 	2050 2900 2300 2900
 Wire Wire Line
@@ -427,16 +420,6 @@ Connection ~ 4300 1250
 Wire Wire Line
 	4300 1250 4300 1300
 Wire Wire Line
-	4300 1600 4300 1750
-Connection ~ 4300 1750
-Wire Wire Line
-	4300 1750 4550 1750
-Wire Wire Line
-	4550 1600 4550 1750
-Connection ~ 4550 1750
-Wire Wire Line
-	4550 1750 4950 1750
-Wire Wire Line
 	4950 1200 4950 1250
 Wire Wire Line
 	4950 1250 5200 1250
@@ -446,13 +429,45 @@ Connection ~ 4950 1250
 Wire Wire Line
 	4950 1250 4950 1300
 Wire Wire Line
-	4950 1600 4950 1750
-Connection ~ 4950 1750
+	4050 1800 4950 1800
 Wire Wire Line
-	4950 1750 5200 1750
+	4100 1750 4300 1750
 Wire Wire Line
-	5200 1600 5200 1750
-Connection ~ 5200 1750
+	4300 1600 4300 1750
+Connection ~ 4300 1750
 Wire Wire Line
-	5200 1750 5550 1750
+	4300 1750 4550 1750
+Wire Wire Line
+	4550 1600 4550 1750
+Connection ~ 4550 1750
+Wire Wire Line
+	4550 1750 5550 1750
+Wire Wire Line
+	4950 1600 4950 1800
+Connection ~ 4950 1800
+Wire Wire Line
+	4950 1800 5200 1800
+Wire Wire Line
+	5200 1600 5200 1800
+Connection ~ 5200 1800
+Wire Wire Line
+	5200 1800 5600 1800
+$Comp
+L power:+3V3 #PWR08
+U 1 1 5F52972F
+P 2250 1750
+F 0 "#PWR08" H 2250 1600 50  0001 C CNN
+F 1 "+3V3" H 2265 1923 50  0000 C CNN
+F 2 "" H 2250 1750 50  0001 C CNN
+F 3 "" H 2250 1750 50  0001 C CNN
+	1    2250 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2750 2150 2750
+Wire Wire Line
+	2250 1750 2250 2600
+Connection ~ 2250 2600
+Wire Wire Line
+	2250 2600 2050 2600
 $EndSCHEMATC
