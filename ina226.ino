@@ -27,24 +27,25 @@ byte ina226_init( uint8_t addr ){
   return ina226_write( REG_CALIB, CALIB );
 }
 
-byte ina226_read_mv( uint16_t *data ){
+byte ina226_read_mv( int16_t *data ){
   uint16_t buff = 0;
   byte result = 0;
 
-  result = ina226_read( REG_BUSV, &buff );
+  result = ina226_read( REG_BUSV, (uint16_t*) &buff );
   if( result ) return result;
 
-  *data = buff * LSB_BUS;
+//  *data = buff * LSB_BUS;
+  *data = buff;
 
   return 0;
 }
 
 
-byte ina226_read_ma( uint16_t *data ){
+byte ina226_read_ma( int16_t *data ){
   uint16_t buff = 0;
   byte result = 0;
 
-  return ina226_read( REG_CURRENT, data );
+  return ina226_read( REG_CURRENT, (uint16_t*)data );
 }
 
 byte ina226_write( uint8_t reg, uint16_t data ){
