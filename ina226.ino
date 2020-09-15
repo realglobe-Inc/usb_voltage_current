@@ -34,12 +34,21 @@ byte ina226_read_mv( int16_t *data ){
   result = ina226_read( REG_BUSV, (uint16_t*) &buff );
   if( result ) return result;
 
-//  *data = buff * LSB_BUS;
-  *data = buff;
+  *data = buff * LSB_BUS;
 
   return 0;
 }
 
+byte ina226_read_mw( int16_t *data ){
+  int16_t buff = 0;
+  byte result = 0;
+
+  result = ina226_read( REG_POWER, (uint16_t*) &buff );
+  if( result ) return result;
+
+  *data = buff * LSB_POWER;
+  return 0;
+}
 
 byte ina226_read_ma( int16_t *data ){
   uint16_t buff = 0;
