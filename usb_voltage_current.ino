@@ -16,19 +16,19 @@ void loop() {
   byte result = 0;
 
   result = ina226_read_mv( &buff );
-  Serial.print( "mv=" );
+  Serial.print( "voltage=" );
   if( 0 == result ){
     Serial.print( buff );
   }
 
   result = ina226_read_ma( &buff );
-    Serial.print( ";ma=" );
+    Serial.print( ";current=" );
   if( 0 == result ){
     Serial.print( buff );
   }
 
   result = ina226_read_mw( &buff );
-  Serial.print( ";mw=" );
+  Serial.print( ";power=" );
   if( 0 == result ){
     Serial.print( buff );
   }
