@@ -1,5 +1,7 @@
 #define INA226_ADDR 0x40
 
+#define STATUS_OK 0
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -32,7 +34,9 @@ void loop() {
   if( 0 == result ){
     Serial.print( buff );
   }
-  Serial.println( "" );
+  Serial.print(";status=");
+  Serial.print(STATUS_OK);
+  Serial.print("\n");
 
   delay(1000);
 }
