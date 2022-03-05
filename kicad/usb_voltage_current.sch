@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:usb_voltage_current-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -334,12 +335,12 @@ NoConn ~ 3200 1600
 NoConn ~ 3000 1600
 NoConn ~ 5700 2550
 $Comp
-L ina226:INA226 U2
+L usb_voltage_current-rescue:INA226-ina226 U2
 U 1 1 5F26533B
 P 5700 2650
 F 0 "U2" H 6228 2976 50  0000 L CNN
 F 1 "INA226" H 6228 2885 50  0000 L CNN
-F 2 "ina226:ina226" H 6300 3250 50  0001 C CNN
+F 2 "kicad_mylib:ina226" H 6300 3250 50  0001 C CNN
 F 3 "" H 6300 3250 50  0001 C CNN
 	1    5700 2650
 	1    0    0    -1  
